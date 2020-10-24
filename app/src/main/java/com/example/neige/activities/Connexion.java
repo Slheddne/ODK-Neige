@@ -42,7 +42,16 @@ public class Connexion extends AppCompatActivity {
         til_pseudo = findViewById(R.id.til_pseudo_log);
         til_password = findViewById(R.id.til_password_log);
         Button btn_send_login = findViewById(R.id.btn_send_login);
+        // Button btn_forgot_password = findViewById(R.id.btn_forgot_password);
         pb_loader_login = findViewById(R.id.pb_loader_login);
+
+        /* btn_forgot_password.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getApplicationContext(), ForgotPassword.class);
+                startActivity(i);
+            }
+        }); */
 
         btn_send_login.setOnClickListener(new View.OnClickListener() {
             @Override

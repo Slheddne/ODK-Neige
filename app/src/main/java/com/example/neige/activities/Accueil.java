@@ -33,7 +33,7 @@ public class Accueil extends AppCompatActivity {
         Button btn_listeformulaires_horsligne = findViewById(R.id.btn_listeformulaires_horsligne);
         Button btn_listeformulaires_bd = findViewById(R.id.btn_listeformulaires_bd);
         Button btn_nouveauformulaire = findViewById(R.id.btn_nouveauformulaire);
-        Button btn_aide = findViewById(R.id.btn_aide);
+        // Button btn_aide = findViewById(R.id.btn_aide);
         Button btn_statistiques = findViewById(R.id.btn_statistiques);
         Button btn_gestion_compte = findViewById(R.id.btn_gestion_compte);
 
@@ -74,14 +74,9 @@ public class Accueil extends AppCompatActivity {
         });
 
         // Ouvrir la fenêtre d'aide
-        btn_aide.setOnClickListener(v -> {
-            /*Intent i = new Intent(getApplicationContext(), ListeFormulairesHorsLigne.class);
-            i.putExtra("pseudo", pseudo);
-            i.putExtra("id_user", id_user);
-            startActivity(i);
-            finish();*/
+        /* btn_aide.setOnClickListener(v -> {
             Toast.makeText(Accueil.this, "Clic !", Toast.LENGTH_SHORT).show();
-        });
+        }); */
 
         // Ouvrir la fenêtre de statistiques
         btn_statistiques.setOnClickListener(v -> {

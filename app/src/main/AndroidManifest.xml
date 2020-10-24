@@ -34,6 +34,7 @@
         <activity android:name=".activities.Inscription" />
         <activity android:name=".activities.Connexion" />
         <activity android:name=".activities.EnvoiFormulaire" />
+        <activity android:name=".activities.ForgotPassword" />
         <activity android:name=".activities.NeigePourcentage" /> <!-- API CODE GOOGLE MAPS -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
