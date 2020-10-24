@@ -9,6 +9,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -46,6 +47,7 @@ public class ListeFormulairesHorsLigne extends AppCompatActivity {
     private MyRequest request;
     private String FILE_NAME;
     private float x1;
+    private boolean selectedAll = false;
 
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
@@ -153,6 +155,23 @@ public class ListeFormulairesHorsLigne extends AppCompatActivity {
 
         Button btn_supprimer = findViewById(R.id.btn_supprimer);
         suppressionForms(btn_supprimer);
+
+        // Tout sélectionner/déselectionner
+        Button btn_selectAll = findViewById(R.id.btn_selectAll);
+        btn_selectAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final ArrayList<Integer> positions = ((FormAdapter) listView.getAdapter()).getPositions();
+                final ArrayList<Formulaire> selectedForms = ((FormAdapter) listView.getAdapter()).getSelectFormList();
+                if (!selectedAll) {
+                    ((FormAdapter) listView.getAdapter()).selectAll();
+                    selectedAll = true;
+                } else {
+                    ((FormAdapter) listView.getAdapter()).unselectAll();
+                    selectedAll = false;
+                }
+            }
+        });
     }
 
     @RequiresApi(api = Build.VERSION_CODES.KITKAT)
